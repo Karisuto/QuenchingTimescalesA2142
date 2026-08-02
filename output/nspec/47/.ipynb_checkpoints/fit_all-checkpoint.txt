@@ -1,0 +1,126 @@
+#stars.sfh--alpha_powerlaw	stars.sfh--ism_metallicity_today	stars.sfh--t_at_frac_0.1000	stars.sfh--t_at_frac_0.3000	stars.sfh--t_at_frac_0.5000	stars.sfh--t_at_frac_0.7000	stars.sfh--t_at_frac_0.9000	stars.sfh--t_at_frac_0.9900	kinematics--los_vel	kinematics--los_sigma	dust.extinction--a_v	parameters--alpha_powerlaw	parameters--ism_metallicity_today	EXTRA--STELLAR_MASS	prior	like	post
+#sampler=maxlike
+#n_varied=13
+#module_0=FullSpectralFit_blue #name from ini file
+#module_1=FullSpectralFit_red #name from ini file
+#timestamp=2026-06-05T00:19:40.989916
+#platform=Linux-5.14.0-611.55.1.el9_7.x86_64-x86_64-with-glibc2.34
+#platform_version=#1 SMP PREEMPT_DYNAMIC Tue May 12 18:04:19 UTC 2026
+#uuid=cb1a28070dea4ca3aed0388867d63223
+#cosmosis_git_version=
+#csl_git_version=
+#cwd_git_version=
+#tolerance=1e-06
+#maxiter=5000
+#output_ini=
+#output_covmat=
+#output_block=
+#method=Nelder-Mead
+#max_posterior=False
+#repeats=5
+#reiterations=1
+#nsteps=1
+#start_method=prior
+## START_OF_PARAMS_INI
+## [runtime]
+## sampler = maxlike
+## 
+## [maxlike]
+## method = Nelder-Mead
+## tolerance = 1e-06
+## maxiter = 5000
+## repeats = 5
+## start_method = prior
+## 
+## [emcee]
+## walkers = 32
+## samples = 900
+## nsteps = 900
+## 
+## [output]
+## filename = ./output/nspec/47/fit_all
+## format = text
+## 
+## [pipeline]
+## modules = FullSpectralFit_blue FullSpectralFit_red
+## values = ./fixedmass_sfh_values.ini
+## likelihoods = FullSpectralFit_blue FullSpectralFit_red
+## extra_output = extra/stellar_mass
+## 
+## [FullSpectralFit_blue]
+## file = /net/virgo01/data/users/tloire/CONDA/ENVS/cosmo-env/lib/python3.11/site-packages/besta/pipeline_modules/full_spectral_fit.py
+## redshift = 0.0906761
+## inputspectrum = ./output/nspec/47/blueflux_47.txt
+## mask = output/nspec/47/bluemask_47.txt
+## wlrange = 3700.0 5900.0
+## wlunits = Angstrom
+## fluxunits = 'erg / (s cm2 Angstrom)'
+## velscale = 70.0
+## mask_telluric = T
+## mask_emission_lines = T
+## sspmodel = EMILES
+## sspmodelargs = PADOVA00,KROUPA_UNIVERSAL
+## sspdir = /net/dataserver3/data/users/caballero/Research/SSP_TEMPLATES/EMILES
+## sfhmodel = FixedMassFracSFH
+## sfhargs = (0.1, 0.3, 0.5, 0.7, 0.9, 0.99)
+## extinctionlaw = ccm89
+## like_name = FullSpectralFit_blue
+## lsf = ./output/nspec/47/bluelsf_47.dat
+## 
+## [FullSpectralFit_red]
+## file = /net/virgo01/data/users/tloire/CONDA/ENVS/cosmo-env/lib/python3.11/site-packages/besta/pipeline_modules/full_spectral_fit.py
+## redshift = 0.0906761
+## inputspectrum = ./output/nspec/47/redflux_47.txt
+## mask = ./output/nspec/47/redmask_47.txt
+## wlrange = 6000.0 9100.0
+## wlunits = Angstrom
+## fluxunits = 'erg / (s cm2 Angstrom)'
+## velscale = 70.0
+## mask_telluric = T
+## mask_emission_lines = T
+## sspmodel = EMILES
+## sspmodelargs = PADOVA00,KROUPA_UNIVERSAL
+## sspdir = /net/dataserver3/data/users/caballero/Research/SSP_TEMPLATES/EMILES
+## sfhmodel = FixedMassFracSFH
+## sfhargs = (0.1, 0.3, 0.5, 0.7, 0.9, 0.99)
+## extinctionlaw = ccm89
+## like_name = FullSpectralFit_red
+## lsf = ./output/nspec/47/redlsf_47.dat
+## 
+## END_OF_PARAMS_INI
+## START_OF_VALUES_INI
+## [stars.sfh]
+## alpha_powerlaw = 0 0.5 3
+## ism_metallicity_today = 0.005 0.01 0.08
+## t_at_frac_0.1000 = 0.001 1.3727899658657856 13.714171758999198
+## t_at_frac_0.3000 = 0.001 4.118369897597357 13.714171758999198
+## t_at_frac_0.5000 = 0.001 6.863949829328928 13.714171758999198
+## t_at_frac_0.7000 = 0.001 9.609529761060498 13.714171758999198
+## t_at_frac_0.9000 = 0.001 12.355109692792071 13.714171758999198
+## t_at_frac_0.9900 = 0.001 13.590620662071277 13.714171758999198
+## 
+## [kinematics]
+## los_vel = -100 0 100
+## los_sigma = 50 200 400
+## los_h3 = 0.0
+## los_h4 = 0.0
+## 
+## [dust.extinction]
+## a_v = 0 0.1 1.5
+## 
+## [parameters]
+## alpha_powerlaw = 0.0 1.0 4.0
+## ism_metallicity_today = 0.005 0.01 0.08
+## 
+## END_OF_VALUES_INI
+## START_OF_PRIORS_INI
+## END_OF_PRIORS_INI
+#start_input=
+2.835103264629292	0.03555063473356168	0.0010966892967266297	0.46085768562742513	0.6329691076407031	0.41336397616087917	0.4133639761608791	10.139209209847772	72.70002187069423	399.80243308726824	0.577924747079415	2.741032703112836	0.021156137696150094	nan	-24.576228827279277	-2.439210262959648e+20	-2.439210262959648e+20
+2.3945092898377895	0.008416563798172873	1.24176373209912	1.5438078291977124	1.753809534729804	2.6585598646554813	10.80520974172315	13.60485235428331	-83.93122661020152	338.0401772297848	0.14866938614251907	1.543988456575987	0.03721830018695342	nan	-24.576228827279277	-2e+20	-2e+20
+0.471778342237274	0.07172069681909138	1.9680696411840926	3.9057800908695364	6.776386045582342	6.77673814645323	6.778609493473109	6.859956772588768	31.975720393627824	272.6178547493642	0.34726118341812895	3.295546809515328	0.03996132362861485	10.193400279756919	-24.576228827279277	2.026583063523256	-22.549645763756022
+0.3757689070653934	0.07907699087995007	3.876787783413213	5.039709373802262	5.039745739397937	5.529008858460995	5.529011153320195	6.105494333637632	-59.345762457299635	399.30805906259485	0.30683977110800575	0.8454224150046867	0.020366327350998432	10.224091302571587	-24.576228827279277	2.0324209866571374	-22.54380784062214
+0.6523949457223283	0.03976134847327004	1.4533873897806384	1.881507798792312	1.881526479979852	5.55543084801185	6.06646599313392	11.681104786473002	34.15319718038637	363.4637636634125	0.15081089126304226	1.5867288463661016	0.04160338522892702	10.122020818520129	-24.576228827279277	2.068594348496477	-22.507634478782798
+#evaluations=48690
+#successes=48690
+#complete=1

@@ -1,0 +1,9 @@
+nspec_cutred/
+nspec_nolsf_cutred_forcesnr/
+fit_all.txt
+fit_all.maxlike.txt
+L2/
+CAL/
+2d_pdfs
+corner_plot.png
+data/
